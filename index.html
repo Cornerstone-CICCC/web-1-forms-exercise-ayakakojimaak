@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Information Form</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
+      <div class="section">
+        <h3>Personal Information</h3>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Preferences</h3>
+        <div class="form-group">
+          <label for="color">Favorite Color:</label>
+          <input type="color" id="color" name="color" />
+        </div>
+        <div class="form-group">
+          <label for="hobby">Hobby:</label>
+          <input type="text" id="hobby" name="hobby" />
+        </div>
+        <div class="form-group">
+          <label for="experience">Experience Level:</label>
+          <input type="range" id="experience" name="experience" min="1" max="10" class="slider" />
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Contact Preferences</h3>
+        <div class="form-group">
+          <label for="contact-method">Preferred Contact Method:</label>
+          <select id="contact-method" name="contact-method">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="mail">Mail</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Subscribe to Newsletter:</label>
+          <input type="checkbox" name="newsletter" />
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Preferences</h3>
+        <div class="form-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>More Information</h3>
+        <div class="form-group">
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="bio" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Upload Documents</h3>
+        <div class="form-group">
+          <label for="documents">Resume and other certificates:</label>
+          <input type="file" id="documents" name="documents" multiple />
+        </div>
+      </div>
+
+      <div class="section submit-buttons">
+        <h3>Submission</h3>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
     </form>
-</body>
+  </body>
 </html>
